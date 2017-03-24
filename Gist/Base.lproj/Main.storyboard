@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Gists View Controller-->
+        <!--Gists-->
         <scene sceneID="aWc-Vf-2Jh">
             <objects>
                 <viewController id="qTd-a4-icg" customClass="GistsViewController" customModule="Gist" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,18 +28,18 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9A9-oU-lHM" id="yH4-4I-IrJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="File Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jX4-hn-pcW">
-                                                    <rect key="frame" x="15" y="4" width="76" height="21"/>
+                                                    <rect key="frame" x="15" y="5" width="76" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jyc-cp-X7h">
-                                                    <rect key="frame" x="15" y="25" width="52" height="15"/>
+                                                    <rect key="frame" x="15" y="25.5" width="52" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -64,7 +64,7 @@
                             <constraint firstAttribute="trailing" secondItem="ldT-Yf-ZAG" secondAttribute="trailing" id="TPi-ue-cYt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Bmp-AE-YpT"/>
+                    <navigationItem key="navigationItem" title="Gists" id="Bmp-AE-YpT"/>
                     <connections>
                         <outlet property="tableView" destination="ldT-Yf-ZAG" id="rkP-iC-usA"/>
                     </connections>
@@ -114,10 +114,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kl6-6Q-zt6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zEO-gX-Jfx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zEO-gX-Jfx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>

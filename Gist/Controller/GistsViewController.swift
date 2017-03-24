@@ -6,7 +6,6 @@ class GistsViewController: UIViewController, UITableViewDelegate {
 
 	@IBOutlet weak var tableView: UITableView!
 	var viewModel = GistsViewModel()
-
 	let bag = DisposeBag()
 
 	override func viewDidLoad() {
@@ -14,7 +13,7 @@ class GistsViewController: UIViewController, UITableViewDelegate {
 
 		tableView.rx.setDelegate(self).disposed(by: bag)
 
-		viewModel.gists
+		viewModel.gists.asObservable()
 			.bindTo(tableView.rx.items(cellIdentifier: "GistCell", cellType: GistCell.self))
 			{ (row, element, cell) in
 				cell.viewModel = GistCellViewModel(gist: element)
@@ -34,16 +33,17 @@ class GistsViewController: UIViewController, UITableViewDelegate {
 	}
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//		guard let des = segue.destination as? DetailViewController else { return }
-//		guard let indexPath = tableView.indexPathForSelectedRow else { return }
-//		des.textView.text = self.viewModel.gists[indexPath.row].content
+		guard let des = segue.destination as? DetailViewController else { return }
+		guard let indexPath = tableView.indexPathForSelectedRow else { return }
+		self.tableView.deselectRow(at: indexPath, animated: true)
+		des.content = (viewModel.gists.value)[indexPath.row].content
 	}
 }
 
 class GistsViewModel {
 	let bag = DisposeBag()
 	var userName: String?
-	var gists: BehaviorSubject<[Gist]> = BehaviorSubject(value: [])
+	var gists: Variable<[Gist]> = Variable([])
 	var selectedIndexPath: Variable<IndexPath> = Variable([])
 	var numberOfSections: Int = 1
 	var rowsPerSection: [Int] = [0]
@@ -54,7 +54,7 @@ class GistsViewModel {
 			print("content: \(json)")
 			guard let gists = json as? [[String: Any]] else { return }
 			self.rowsPerSection[0] = gists.count
-			self.gists.onNext(gists.map({ Gist(json: $0) }))
+			self.gists.value = gists.map({ Gist(json: $0) })
 		}).disposed(by: bag)
 	}
 }
@@ -78,9 +78,10 @@ class GistCellViewModel {
 	let bag = DisposeBag()
 	var fileName = PublishSubject<String>()
 	var language = PublishSubject<String>()
+	let gist: Gist
 
 	init(gist: Gist) {
-
+		self.gist = gist
 		DispatchQueue.main.async {
 			self.fileName.onNext(gist.fileName)
 			self.language.onNext(gist.language)
