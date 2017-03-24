@@ -85,24 +85,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM4-Jp-lak">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SeI-ue-qBz">
+                                <rect key="frame" x="127" y="72" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="themeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="UbX-nh-GUw"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TM4-Jp-lak" secondAttribute="bottom" id="PcY-yc-QvL"/>
-                            <constraint firstItem="TM4-Jp-lak" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="U1D-B9-tTP"/>
-                            <constraint firstItem="TM4-Jp-lak" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="axq-cp-Crz"/>
-                            <constraint firstAttribute="trailing" secondItem="TM4-Jp-lak" secondAttribute="trailing" id="q2K-tj-dIY"/>
+                            <constraint firstItem="SeI-ue-qBz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="BfF-Q1-7WO"/>
+                            <constraint firstItem="SeI-ue-qBz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N1y-4D-mxB"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="TM4-Jp-lak" id="106-Fu-tfb"/>
+                        <outlet property="themeSegmentedControl" destination="SeI-ue-qBz" id="aDH-Ee-U0o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

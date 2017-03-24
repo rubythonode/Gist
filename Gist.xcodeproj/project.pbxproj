@@ -17,6 +17,27 @@
 		E3C2A8D41E7139C600FE2254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C2A8D21E7139C600FE2254 /* LaunchScreen.storyboard */; };
 		E3C2A8DF1E7139C600FE2254 /* GistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2A8DE1E7139C600FE2254 /* GistTests.swift */; };
 		E3C2A8EA1E7139C600FE2254 /* GistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2A8E91E7139C600FE2254 /* GistUITests.swift */; };
+		E3EE3AA41E853D0C0063FD6E /* StringLayoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AA21E853D0C0063FD6E /* StringLayoutHandler.swift */; };
+		E3EE3AA51E853D0C0063FD6E /* TmTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AA31E853D0C0063FD6E /* TmTypes.swift */; };
+		E3EE3AAA1E853D260063FD6E /* Themes in Resources */ = {isa = PBXBuildFile; fileRef = E3EE3AA61E853D260063FD6E /* Themes */; };
+		E3EE3AAB1E853D260063FD6E /* Swift.tmLanguage in Resources */ = {isa = PBXBuildFile; fileRef = E3EE3AA71E853D260063FD6E /* Swift.tmLanguage */; };
+		E3EE3AAC1E853D260063FD6E /* Tomorrow-Night-Bright.tmTheme in Resources */ = {isa = PBXBuildFile; fileRef = E3EE3AA81E853D260063FD6E /* Tomorrow-Night-Bright.tmTheme */; };
+		E3EE3AAD1E853D260063FD6E /* Tomorrow.tmTheme in Resources */ = {isa = PBXBuildFile; fileRef = E3EE3AA91E853D260063FD6E /* Tomorrow.tmTheme */; };
+		E3EE3ABF1E853DEC0063FD6E /* AttributedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AAF1E853DEC0063FD6E /* AttributedParser.swift */; };
+		E3EE3AC01E853DEC0063FD6E /* AttributedParsingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AB01E853DEC0063FD6E /* AttributedParsingOperation.swift */; };
+		E3EE3AC11E853DEC0063FD6E /* BundleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AB11E853DEC0063FD6E /* BundleManager.swift */; };
+		E3EE3AC21E853DEC0063FD6E /* Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AB21E853DEC0063FD6E /* Capture.swift */; };
+		E3EE3AC31E853DEC0063FD6E /* CaptureCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AB31E853DEC0063FD6E /* CaptureCollection.swift */; };
+		E3EE3AC41E853DEC0063FD6E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AB41E853DEC0063FD6E /* Color.swift */; };
+		E3EE3AC51E853DEC0063FD6E /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AB51E853DEC0063FD6E /* Language.swift */; };
+		E3EE3AC61E853DEC0063FD6E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AB61E853DEC0063FD6E /* Parser.swift */; };
+		E3EE3AC71E853DEC0063FD6E /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AB71E853DEC0063FD6E /* Pattern.swift */; };
+		E3EE3AC81E853DEC0063FD6E /* RefernceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AB81E853DEC0063FD6E /* RefernceManager.swift */; };
+		E3EE3AC91E853DEC0063FD6E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AB91E853DEC0063FD6E /* Repository.swift */; };
+		E3EE3ACA1E853DEC0063FD6E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3ABA1E853DEC0063FD6E /* Result.swift */; };
+		E3EE3ACB1E853DEC0063FD6E /* ResultSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3ABB1E853DEC0063FD6E /* ResultSet.swift */; };
+		E3EE3ACC1E853DEC0063FD6E /* ScopedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3ABC1E853DEC0063FD6E /* ScopedString.swift */; };
+		E3EE3ACD1E853DEC0063FD6E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3ABE1E853DEC0063FD6E /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +64,9 @@
 		B5AA2EC9D18F7FCE0053E5F8 /* Pods-Gist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gist/Pods-Gist.release.xcconfig"; sourceTree = "<group>"; };
 		D455E7A674E6567E228BA24D /* Pods-GistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GistTests/Pods-GistTests.release.xcconfig"; sourceTree = "<group>"; };
 		DBF785A8F9DEACBF6CEB24BE /* Pods-GistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GistTests/Pods-GistTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E3898A981E713B8800283B08 /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; };
 		E3BFF5F41E84B6D100A660E3 /* GistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GistsViewController.swift; path = Controller/GistsViewController.swift; sourceTree = "<group>"; };
 		E3C2A8C61E7139C600FE2254 /* Gist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gist.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3C2A8C91E7139C600FE2254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E3C2A8C91E7139C600FE2254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Gist/AppDelegate.swift; sourceTree = "<group>"; };
 		E3C2A8CB1E7139C600FE2254 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E3C2A8CE1E7139C600FE2254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3C2A8D01E7139C600FE2254 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +78,28 @@
 		E3C2A8E51E7139C600FE2254 /* GistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C2A8E91E7139C600FE2254 /* GistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistUITests.swift; sourceTree = "<group>"; };
 		E3C2A8EB1E7139C600FE2254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3EE3AA21E853D0C0063FD6E /* StringLayoutHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringLayoutHandler.swift; path = Gist/StringLayoutHandler.swift; sourceTree = "<group>"; };
+		E3EE3AA31E853D0C0063FD6E /* TmTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TmTypes.swift; path = Gist/TmTypes.swift; sourceTree = "<group>"; };
+		E3EE3AA61E853D260063FD6E /* Themes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Themes; path = Gist/Themes; sourceTree = "<group>"; };
+		E3EE3AA71E853D260063FD6E /* Swift.tmLanguage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Swift.tmLanguage; path = Gist/Swift.tmLanguage; sourceTree = "<group>"; };
+		E3EE3AA81E853D260063FD6E /* Tomorrow-Night-Bright.tmTheme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Tomorrow-Night-Bright.tmTheme"; path = "Gist/Tomorrow-Night-Bright.tmTheme"; sourceTree = "<group>"; };
+		E3EE3AA91E853D260063FD6E /* Tomorrow.tmTheme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Tomorrow.tmTheme; path = Gist/Tomorrow.tmTheme; sourceTree = "<group>"; };
+		E3EE3AAF1E853DEC0063FD6E /* AttributedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttributedParser.swift; path = Gist/SyntaxKit/AttributedParser.swift; sourceTree = "<group>"; };
+		E3EE3AB01E853DEC0063FD6E /* AttributedParsingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttributedParsingOperation.swift; path = Gist/SyntaxKit/AttributedParsingOperation.swift; sourceTree = "<group>"; };
+		E3EE3AB11E853DEC0063FD6E /* BundleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BundleManager.swift; path = Gist/SyntaxKit/BundleManager.swift; sourceTree = "<group>"; };
+		E3EE3AB21E853DEC0063FD6E /* Capture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Capture.swift; path = Gist/SyntaxKit/Capture.swift; sourceTree = "<group>"; };
+		E3EE3AB31E853DEC0063FD6E /* CaptureCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureCollection.swift; path = Gist/SyntaxKit/CaptureCollection.swift; sourceTree = "<group>"; };
+		E3EE3AB41E853DEC0063FD6E /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = Gist/SyntaxKit/Color.swift; sourceTree = "<group>"; };
+		E3EE3AB51E853DEC0063FD6E /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Language.swift; path = Gist/SyntaxKit/Language.swift; sourceTree = "<group>"; };
+		E3EE3AB61E853DEC0063FD6E /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Gist/SyntaxKit/Parser.swift; sourceTree = "<group>"; };
+		E3EE3AB71E853DEC0063FD6E /* Pattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pattern.swift; path = Gist/SyntaxKit/Pattern.swift; sourceTree = "<group>"; };
+		E3EE3AB81E853DEC0063FD6E /* RefernceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RefernceManager.swift; path = Gist/SyntaxKit/RefernceManager.swift; sourceTree = "<group>"; };
+		E3EE3AB91E853DEC0063FD6E /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Gist/SyntaxKit/Repository.swift; sourceTree = "<group>"; };
+		E3EE3ABA1E853DEC0063FD6E /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Gist/SyntaxKit/Result.swift; sourceTree = "<group>"; };
+		E3EE3ABB1E853DEC0063FD6E /* ResultSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultSet.swift; path = Gist/SyntaxKit/ResultSet.swift; sourceTree = "<group>"; };
+		E3EE3ABC1E853DEC0063FD6E /* ScopedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScopedString.swift; path = Gist/SyntaxKit/ScopedString.swift; sourceTree = "<group>"; };
+		E3EE3ABD1E853DEC0063FD6E /* SyntaxKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyntaxKit.h; path = Gist/SyntaxKit/SyntaxKit.h; sourceTree = "<group>"; };
+		E3EE3ABE1E853DEC0063FD6E /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Gist/SyntaxKit/Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +152,11 @@
 		E3C2A8BD1E7139C600FE2254 = {
 			isa = PBXGroup;
 			children = (
-				E3898A981E713B8800283B08 /* test.playground */,
-				E3C2A8C81E7139C600FE2254 /* Gist */,
+				E3EE3AD01E8540F80063FD6E /* Support files */,
+				E3EE3ACE1E8540980063FD6E /* Application */,
+				E3EE3AAE1E853DDE0063FD6E /* SyntaxKit */,
+				E3C2A8C81E7139C600FE2254 /* Controller */,
+				E3EE3ACF1E8540E80063FD6E /* Storyboard */,
 				E3C2A8DD1E7139C600FE2254 /* GistTests */,
 				E3C2A8E81E7139C600FE2254 /* GistUITests */,
 				E3C2A8C71E7139C600FE2254 /* Products */,
@@ -130,17 +175,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E3C2A8C81E7139C600FE2254 /* Gist */ = {
+		E3C2A8C81E7139C600FE2254 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E3C2A8C91E7139C600FE2254 /* AppDelegate.swift */,
 				E3BFF5F41E84B6D100A660E3 /* GistsViewController.swift */,
 				E3C2A8CB1E7139C600FE2254 /* DetailViewController.swift */,
-				E3C2A8CD1E7139C600FE2254 /* Main.storyboard */,
-				E3C2A8D01E7139C600FE2254 /* Assets.xcassets */,
-				E3C2A8D21E7139C600FE2254 /* LaunchScreen.storyboard */,
-				E3C2A8D51E7139C600FE2254 /* Info.plist */,
 			);
+			name = Controller;
 			path = Gist;
 			sourceTree = "<group>";
 		};
@@ -160,6 +201,63 @@
 				E3C2A8EB1E7139C600FE2254 /* Info.plist */,
 			);
 			path = GistUITests;
+			sourceTree = "<group>";
+		};
+		E3EE3AAE1E853DDE0063FD6E /* SyntaxKit */ = {
+			isa = PBXGroup;
+			children = (
+				E3EE3AA21E853D0C0063FD6E /* StringLayoutHandler.swift */,
+				E3EE3AA31E853D0C0063FD6E /* TmTypes.swift */,
+				E3EE3AAF1E853DEC0063FD6E /* AttributedParser.swift */,
+				E3EE3AB01E853DEC0063FD6E /* AttributedParsingOperation.swift */,
+				E3EE3AB11E853DEC0063FD6E /* BundleManager.swift */,
+				E3EE3AB21E853DEC0063FD6E /* Capture.swift */,
+				E3EE3AB31E853DEC0063FD6E /* CaptureCollection.swift */,
+				E3EE3AB41E853DEC0063FD6E /* Color.swift */,
+				E3EE3AB51E853DEC0063FD6E /* Language.swift */,
+				E3EE3AB61E853DEC0063FD6E /* Parser.swift */,
+				E3EE3AB71E853DEC0063FD6E /* Pattern.swift */,
+				E3EE3AB81E853DEC0063FD6E /* RefernceManager.swift */,
+				E3EE3AB91E853DEC0063FD6E /* Repository.swift */,
+				E3EE3ABA1E853DEC0063FD6E /* Result.swift */,
+				E3EE3ABB1E853DEC0063FD6E /* ResultSet.swift */,
+				E3EE3ABC1E853DEC0063FD6E /* ScopedString.swift */,
+				E3EE3ABD1E853DEC0063FD6E /* SyntaxKit.h */,
+				E3EE3ABE1E853DEC0063FD6E /* Theme.swift */,
+			);
+			name = SyntaxKit;
+			sourceTree = "<group>";
+		};
+		E3EE3ACE1E8540980063FD6E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E3EE3AA61E853D260063FD6E /* Themes */,
+				E3EE3AA71E853D260063FD6E /* Swift.tmLanguage */,
+				E3EE3AA81E853D260063FD6E /* Tomorrow-Night-Bright.tmTheme */,
+				E3EE3AA91E853D260063FD6E /* Tomorrow.tmTheme */,
+				E3C2A8C91E7139C600FE2254 /* AppDelegate.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		E3EE3ACF1E8540E80063FD6E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E3C2A8CD1E7139C600FE2254 /* Main.storyboard */,
+				E3C2A8D21E7139C600FE2254 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			path = Gist;
+			sourceTree = "<group>";
+		};
+		E3EE3AD01E8540F80063FD6E /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				E3C2A8D01E7139C600FE2254 /* Assets.xcassets */,
+				E3C2A8D51E7139C600FE2254 /* Info.plist */,
+			);
+			name = "Support files";
+			path = Gist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,8 +376,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3EE3AAD1E853D260063FD6E /* Tomorrow.tmTheme in Resources */,
+				E3EE3AAB1E853D260063FD6E /* Swift.tmLanguage in Resources */,
+				E3EE3AAA1E853D260063FD6E /* Themes in Resources */,
 				E3C2A8D41E7139C600FE2254 /* LaunchScreen.storyboard in Resources */,
 				E3C2A8D11E7139C600FE2254 /* Assets.xcassets in Resources */,
+				E3EE3AAC1E853D260063FD6E /* Tomorrow-Night-Bright.tmTheme in Resources */,
 				E3C2A8CF1E7139C600FE2254 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,9 +500,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3EE3AC31E853DEC0063FD6E /* CaptureCollection.swift in Sources */,
+				E3EE3AC81E853DEC0063FD6E /* RefernceManager.swift in Sources */,
 				E3BFF5F51E84B6D100A660E3 /* GistsViewController.swift in Sources */,
+				E3EE3AC41E853DEC0063FD6E /* Color.swift in Sources */,
 				E3C2A8CC1E7139C600FE2254 /* DetailViewController.swift in Sources */,
+				E3EE3ACB1E853DEC0063FD6E /* ResultSet.swift in Sources */,
+				E3EE3AC61E853DEC0063FD6E /* Parser.swift in Sources */,
+				E3EE3ACC1E853DEC0063FD6E /* ScopedString.swift in Sources */,
+				E3EE3AA51E853D0C0063FD6E /* TmTypes.swift in Sources */,
+				E3EE3AC21E853DEC0063FD6E /* Capture.swift in Sources */,
+				E3EE3AC11E853DEC0063FD6E /* BundleManager.swift in Sources */,
+				E3EE3AC01E853DEC0063FD6E /* AttributedParsingOperation.swift in Sources */,
 				E3C2A8CA1E7139C600FE2254 /* AppDelegate.swift in Sources */,
+				E3EE3AC91E853DEC0063FD6E /* Repository.swift in Sources */,
+				E3EE3AC51E853DEC0063FD6E /* Language.swift in Sources */,
+				E3EE3ABF1E853DEC0063FD6E /* AttributedParser.swift in Sources */,
+				E3EE3ACA1E853DEC0063FD6E /* Result.swift in Sources */,
+				E3EE3ACD1E853DEC0063FD6E /* Theme.swift in Sources */,
+				E3EE3AC71E853DEC0063FD6E /* Pattern.swift in Sources */,
+				E3EE3AA41E853D0C0063FD6E /* StringLayoutHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
