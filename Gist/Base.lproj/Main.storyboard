@@ -8,60 +8,75 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Gists-->
-        <scene sceneID="lfx-do-iaE">
+        <!--Gists View Controller-->
+        <scene sceneID="aWc-Vf-2Jh">
             <objects>
-                <tableViewController id="Pr9-EA-iSM" customClass="GistsTableViewController" customModule="Gist" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="afa-sy-Q0r">
+                <viewController id="qTd-a4-icg" customClass="GistsViewController" customModule="Gist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="07s-Ob-L7h"/>
+                        <viewControllerLayoutGuide type="bottom" id="gJI-2K-orF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YKt-ic-01E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ldT-Yf-ZAG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GistCell" textLabel="jX4-hn-pcW" detailTextLabel="Jyc-cp-X7h" style="IBUITableViewCellStyleSubtitle" id="9A9-oU-lHM" customClass="GistCell" customModule="Gist" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9A9-oU-lHM" id="yH4-4I-IrJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="File Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jX4-hn-pcW">
+                                                    <rect key="frame" x="15" y="4" width="76" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jyc-cp-X7h">
+                                                    <rect key="frame" x="15" y="25" width="52" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fileNameLabel" destination="jX4-hn-pcW" id="WtG-Ux-tb2"/>
+                                            <outlet property="languageLabel" destination="Jyc-cp-X7h" id="Lyt-Uv-sRJ"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Oqs-LM-ufC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GistCell" textLabel="pCw-Vr-eZp" detailTextLabel="diU-LL-rnr" style="IBUITableViewCellStyleSubtitle" id="pah-1v-gpa" customClass="GistCell" customModule="Gist" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pah-1v-gpa" id="1vU-NX-gUQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="File Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pCw-Vr-eZp">
-                                            <rect key="frame" x="15" y="5" width="76" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="diU-LL-rnr">
-                                            <rect key="frame" x="15" y="25.5" width="52" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="fileNameLabel" destination="pCw-Vr-eZp" id="Kvi-co-v2w"/>
-                                    <outlet property="languageLabel" destination="diU-LL-rnr" id="Ri6-bd-ZuQ"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="B84-av-XjN"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Pr9-EA-iSM" id="BLV-tU-2yP"/>
-                            <outlet property="delegate" destination="Pr9-EA-iSM" id="gd8-dP-ijE"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Gists" id="JAZ-4M-57G"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="70M-0L-pVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="gJI-2K-orF" firstAttribute="top" secondItem="ldT-Yf-ZAG" secondAttribute="bottom" id="D0A-C5-U5l"/>
+                            <constraint firstItem="ldT-Yf-ZAG" firstAttribute="leading" secondItem="YKt-ic-01E" secondAttribute="leading" id="O4e-Hg-axG"/>
+                            <constraint firstItem="ldT-Yf-ZAG" firstAttribute="top" secondItem="YKt-ic-01E" secondAttribute="top" id="P5M-cM-SDM"/>
+                            <constraint firstAttribute="trailing" secondItem="ldT-Yf-ZAG" secondAttribute="trailing" id="TPi-ue-cYt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bmp-AE-YpT"/>
+                    <connections>
+                        <outlet property="tableView" destination="ldT-Yf-ZAG" id="rkP-iC-usA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="crf-Vx-YL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="199.19999999999999" y="136.28185907046478"/>
+            <point key="canvasLocation" x="244" y="135.38230884557723"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DetailViewController" customModule="Gist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -109,7 +124,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Pr9-EA-iSM" kind="relationship" relationship="rootViewController" id="dCk-fe-61s"/>
+                        <segue destination="qTd-a4-icg" kind="relationship" relationship="rootViewController" id="nRD-f5-tG9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHA-Kf-XcN" userLabel="First Responder" sceneMemberID="firstResponder"/>

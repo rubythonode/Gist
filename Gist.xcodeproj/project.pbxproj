@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		9EA53B4BCA9F25E8693670D1 /* Pods_GistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0AEE3945C863F601DF335AA /* Pods_GistTests.framework */; };
 		AC93E7884E615B19D791B3D4 /* Pods_Gist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9CB90EF96024B149B59F54 /* Pods_Gist.framework */; };
-		E3BFF5F51E84B6D100A660E3 /* GistsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFF5F41E84B6D100A660E3 /* GistsTableViewController.swift */; };
+		E3BFF5F51E84B6D100A660E3 /* GistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFF5F41E84B6D100A660E3 /* GistsViewController.swift */; };
 		E3C2A8CA1E7139C600FE2254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2A8C91E7139C600FE2254 /* AppDelegate.swift */; };
-		E3C2A8CC1E7139C600FE2254 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2A8CB1E7139C600FE2254 /* ViewController.swift */; };
+		E3C2A8CC1E7139C600FE2254 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2A8CB1E7139C600FE2254 /* DetailViewController.swift */; };
 		E3C2A8CF1E7139C600FE2254 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C2A8CD1E7139C600FE2254 /* Main.storyboard */; };
 		E3C2A8D11E7139C600FE2254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C2A8D01E7139C600FE2254 /* Assets.xcassets */; };
 		E3C2A8D41E7139C600FE2254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C2A8D21E7139C600FE2254 /* LaunchScreen.storyboard */; };
@@ -44,10 +44,10 @@
 		D455E7A674E6567E228BA24D /* Pods-GistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GistTests/Pods-GistTests.release.xcconfig"; sourceTree = "<group>"; };
 		DBF785A8F9DEACBF6CEB24BE /* Pods-GistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GistTests/Pods-GistTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3898A981E713B8800283B08 /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; };
-		E3BFF5F41E84B6D100A660E3 /* GistsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GistsTableViewController.swift; path = Controller/GistsTableViewController.swift; sourceTree = "<group>"; };
+		E3BFF5F41E84B6D100A660E3 /* GistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GistsViewController.swift; path = Controller/GistsViewController.swift; sourceTree = "<group>"; };
 		E3C2A8C61E7139C600FE2254 /* Gist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C2A8C91E7139C600FE2254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E3C2A8CB1E7139C600FE2254 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3C2A8CB1E7139C600FE2254 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E3C2A8CE1E7139C600FE2254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3C2A8D01E7139C600FE2254 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3C2A8D31E7139C600FE2254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				E3C2A8C91E7139C600FE2254 /* AppDelegate.swift */,
-				E3BFF5F41E84B6D100A660E3 /* GistsTableViewController.swift */,
-				E3C2A8CB1E7139C600FE2254 /* ViewController.swift */,
+				E3BFF5F41E84B6D100A660E3 /* GistsViewController.swift */,
+				E3C2A8CB1E7139C600FE2254 /* DetailViewController.swift */,
 				E3C2A8CD1E7139C600FE2254 /* Main.storyboard */,
 				E3C2A8D01E7139C600FE2254 /* Assets.xcassets */,
 				E3C2A8D21E7139C600FE2254 /* LaunchScreen.storyboard */,
@@ -398,8 +398,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3BFF5F51E84B6D100A660E3 /* GistsTableViewController.swift in Sources */,
-				E3C2A8CC1E7139C600FE2254 /* ViewController.swift in Sources */,
+				E3BFF5F51E84B6D100A660E3 /* GistsViewController.swift in Sources */,
+				E3C2A8CC1E7139C600FE2254 /* DetailViewController.swift in Sources */,
 				E3C2A8CA1E7139C600FE2254 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
