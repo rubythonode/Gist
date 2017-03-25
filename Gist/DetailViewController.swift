@@ -9,11 +9,9 @@ class DetailViewController: UIViewController {
 		case tomorrowBright = 1
 	}
 
-	fileprivate var scrollView: UIScrollView?
-
 	fileprivate var contentView = UIView(frame: CGRect(origin: CGPoint.zero, size: CGSize.zero))
 
-	fileprivate var codeLabel: UILabel?
+	@IBOutlet weak var codeTextView: UITextView!
 
 	fileprivate var manager = BundleManager {
 		(identifier, isLanguage) -> (URL?) in
@@ -35,7 +33,6 @@ class DetailViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		setUpScrollView()
 		updateViews(for: .tomorrow)
 	}
 
@@ -45,41 +42,25 @@ class DetailViewController: UIViewController {
 		updateViews(for: theme)
 	}
 
-	fileprivate func setUpScrollView() {
-		scrollView = UIScrollView()
-		guard let scrollView = self.scrollView else { fatalError() }
-		let views: [String: UIView] = ["scrollView": scrollView, "segmented": themeSegmentedControl]
-		scrollView.translatesAutoresizingMaskIntoConstraints = false
-		view.addSubview(scrollView)
-		var constraints = [NSLayoutConstraint]()
-		constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[scrollView]|", options: [], metrics: nil, views: views)
-		constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[segmented]-[scrollView]|", options: [], metrics: nil, views: views)
-
-		NSLayoutConstraint.activate(constraints)
-	}
-
 	fileprivate func updateViews(`for` theme: ThemeApplied) {
-		switch theme {
-		case .tomorrow:
-			scrollView?.backgroundColor = .white
-		case .tomorrowBright:
-			scrollView?.backgroundColor = .black
-		}
-		setUpCodeLabel(with: theme)
+//		switch theme {
+//		case .tomorrow:
+////			scrollView?.backgroundColor = .white
+//		case .tomorrowBright:
+////			scrollView?.backgroundColor = .black
+//		}
+		setUpCodeTextView(with: theme)
 	}
 
-	fileprivate func setUpCodeLabel(with theme: ThemeApplied) {
+	fileprivate func setUpCodeTextView(with theme: ThemeApplied) {
 		let codeString = generateCodeString(styledWith: theme)
 
-		self.codeLabel?.removeFromSuperview()
-		let codeLabel = UILabel()
-		codeLabel.attributedText = codeString
-		codeLabel.frame.size = codeString.size()
-		codeLabel.frame.origin = CGPoint(x: 5, y: 5)
-		codeLabel.numberOfLines = 0
-		self.codeLabel = codeLabel
-		scrollView?.contentSize = CGSize(width: codeString.size().width + 10, height: codeString.size().height + 10)
-		scrollView?.addSubview(codeLabel)
+		let frame = CGRect(x: 0, y: 10, width: codeString.size().width, height: view.frame.height - 10)
+//		codeTextView.contentSize = codeTextView.frame.size
+		codeTextView.attributedText = codeString
+//		codeTextView.showsHorizontalScrollIndicator = true
+//		codeTextView.isScrollEnabled = true
+		self.view.addSubview(codeTextView)
 	}
 
 	fileprivate func generateCodeString(styledWith theme: ThemeApplied) -> NSAttributedString {
