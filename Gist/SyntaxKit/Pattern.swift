@@ -107,7 +107,7 @@ class Pattern: NSObject {
             self.begin == nil &&
             self.end == nil &&
             (dictionary["patterns"] as? [[AnyHashable: Any]] == nil || (dictionary["patterns"] as? [[AnyHashable: Any]])!.count == 0) {
-                print("Attention: pattern not recognized: \(self.name)")
+                print("Attention: pattern not recognized: \(String(describing: self.name))")
                 return nil
         }
 

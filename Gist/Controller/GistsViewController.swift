@@ -5,23 +5,24 @@ import RxCocoa
 class GistsViewController: UIViewController, UITableViewDelegate {
 
 	@IBOutlet weak var tableView: UITableView!
-	var viewModel = GistsViewModel()
+	@IBOutlet weak var setUserNameButton: UIBarButtonItem!
+	var viewModel: GistsViewModel!
 	let bag = DisposeBag()
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-
-		tableView.rx.setDelegate(self).disposed(by: bag)
-
-		viewModel.gists.asObservable()
-			.bindTo(tableView.rx.items(cellIdentifier: "GistCell", cellType: GistCell.self))
-			{ (row, element, cell) in
-				cell.viewModel = GistCellViewModel(gist: element)
-			}.disposed(by: bag)
-
-		tableView.rx.itemSelected.asObservable().subscribe(onNext: { item in
-			self.viewModel.selectedIndexPath.value = item
-		}).disposed(by: bag)
+	override func viewWillAppear(_ animated: Bool) {
+		
+		if UserInfo.userName != "" {
+			viewModel = GistsViewModel(userName: UserInfo.userName)
+			tableView.rx.setDelegate(self).disposed(by: bag)
+			viewModel.gists.asObservable()
+				.bindTo(tableView.rx.items(cellIdentifier: "GistCell", cellType: GistCell.self))
+				{ (row, element, cell) in
+					cell.viewModel = GistCellViewModel(gist: element)
+				}.disposed(by: bag)
+			tableView.rx.itemSelected.asObservable().subscribe(onNext: { item in
+				self.viewModel.selectedIndexPath.value = item
+			}).disposed(by: bag)
+		}
 	}
 
 	func numberOfSections(in tableView: UITableView) -> Int {
@@ -48,8 +49,8 @@ class GistsViewModel {
 	var numberOfSections: Int = 1
 	var rowsPerSection: [Int] = [0]
 
-	init() {
-		let url = URL(string: "https://api.github.com/users/trilliwon/gists")!
+	init(userName: String) {
+		let url = URL(string: "https://api.github.com/users/\(userName)/gists")!
 		URLSession.shared.rx.json(url: url).subscribe(onNext: { json in
 			print("content: \(json)")
 			guard let gists = json as? [[String: Any]] else { return }

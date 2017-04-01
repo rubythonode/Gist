@@ -1,13 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kl6-6Q-zt6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kl6-6Q-zt6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--User Name-->
+        <scene sceneID="eYk-is-EPG">
+            <objects>
+                <viewController id="JMZ-py-5oP" customClass="SettingUserNameViewController" customModule="Gist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8PF-xk-kN9"/>
+                        <viewControllerLayoutGuide type="bottom" id="0q4-pL-eXm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hvh-0H-Isf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YxP-ib-BoI">
+                                <rect key="frame" x="46" y="114" width="283" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YxP-ib-BoI" firstAttribute="centerX" secondItem="hvh-0H-Isf" secondAttribute="centerX" id="FUK-8X-COc"/>
+                            <constraint firstItem="YxP-ib-BoI" firstAttribute="top" secondItem="8PF-xk-kN9" secondAttribute="bottom" constant="50" id="UY2-5L-UCz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YxP-ib-BoI" secondAttribute="trailing" constant="30" id="fo6-sj-PPP"/>
+                            <constraint firstItem="YxP-ib-BoI" firstAttribute="leading" secondItem="hvh-0H-Isf" secondAttribute="leadingMargin" constant="30" id="lsC-P0-vfm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="User Name" id="bPh-8A-6sk">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="3lN-38-4OC"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveBarButton" destination="3lN-38-4OC" id="gVc-Pe-D8J"/>
+                        <outlet property="userNameTextField" destination="YxP-ib-BoI" id="cGn-Js-nfh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbd-fL-HoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1183.2" y="-601.34932533733138"/>
+        </scene>
         <!--Gists-->
         <scene sceneID="aWc-Vf-2Jh">
             <objects>
@@ -64,8 +104,15 @@
                             <constraint firstAttribute="trailing" secondItem="ldT-Yf-ZAG" secondAttribute="trailing" id="TPi-ue-cYt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Gists" id="Bmp-AE-YpT"/>
+                    <navigationItem key="navigationItem" title="Gists" id="Bmp-AE-YpT">
+                        <barButtonItem key="rightBarButtonItem" title="set Name" id="t9c-rR-hS5">
+                            <connections>
+                                <segue destination="YAY-0b-v6Y" kind="presentation" id="Gqe-jW-PMl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="setUserNameButton" destination="t9c-rR-hS5" id="LCJ-UD-xHd"/>
                         <outlet property="tableView" destination="ldT-Yf-ZAG" id="rkP-iC-usA"/>
                     </connections>
                 </viewController>
@@ -136,6 +183,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHA-Kf-XcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-740" y="136.28185907046478"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kd0-dB-iaC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YAY-0b-v6Y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WwS-BH-5uc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JMZ-py-5oP" kind="relationship" relationship="rootViewController" id="TCQ-Hi-DH0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EFv-b0-2st" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="-601.34932533733138"/>
         </scene>
     </scenes>
 </document>

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9EA53B4BCA9F25E8693670D1 /* Pods_GistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0AEE3945C863F601DF335AA /* Pods_GistTests.framework */; };
 		AC93E7884E615B19D791B3D4 /* Pods_Gist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9CB90EF96024B149B59F54 /* Pods_Gist.framework */; };
-		E382098D1E86852D00FD9BA9 /* HTMLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E382098C1E86852D00FD9BA9 /* HTMLViewController.swift */; };
 		E3BFF5F51E84B6D100A660E3 /* GistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFF5F41E84B6D100A660E3 /* GistsViewController.swift */; };
 		E3C2A8CA1E7139C600FE2254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2A8C91E7139C600FE2254 /* AppDelegate.swift */; };
 		E3C2A8CC1E7139C600FE2254 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2A8CB1E7139C600FE2254 /* DetailViewController.swift */; };
@@ -18,6 +17,8 @@
 		E3C2A8D41E7139C600FE2254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C2A8D21E7139C600FE2254 /* LaunchScreen.storyboard */; };
 		E3C2A8DF1E7139C600FE2254 /* GistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2A8DE1E7139C600FE2254 /* GistTests.swift */; };
 		E3C2A8EA1E7139C600FE2254 /* GistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2A8E91E7139C600FE2254 /* GistUITests.swift */; };
+		E3EB66BF1E8F978E008D8643 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EB66BE1E8F978E008D8643 /* UserInfo.swift */; };
+		E3EB66C21E8F99D0008D8643 /* SettingUserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EB66C11E8F99D0008D8643 /* SettingUserNameViewController.swift */; };
 		E3EE3AA41E853D0C0063FD6E /* StringLayoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AA21E853D0C0063FD6E /* StringLayoutHandler.swift */; };
 		E3EE3AA51E853D0C0063FD6E /* TmTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AA31E853D0C0063FD6E /* TmTypes.swift */; };
 		E3EE3AAA1E853D260063FD6E /* Themes in Resources */ = {isa = PBXBuildFile; fileRef = E3EE3AA61E853D260063FD6E /* Themes */; };
@@ -65,7 +66,6 @@
 		B5AA2EC9D18F7FCE0053E5F8 /* Pods-Gist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gist/Pods-Gist.release.xcconfig"; sourceTree = "<group>"; };
 		D455E7A674E6567E228BA24D /* Pods-GistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GistTests/Pods-GistTests.release.xcconfig"; sourceTree = "<group>"; };
 		DBF785A8F9DEACBF6CEB24BE /* Pods-GistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GistTests/Pods-GistTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E382098C1E86852D00FD9BA9 /* HTMLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTMLViewController.swift; path = Controller/HTMLViewController.swift; sourceTree = "<group>"; };
 		E38A731D1E88B739004C5D48 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		E3BFF5F41E84B6D100A660E3 /* GistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GistsViewController.swift; path = Controller/GistsViewController.swift; sourceTree = "<group>"; };
 		E3C2A8C61E7139C600FE2254 /* Gist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gist.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +81,8 @@
 		E3C2A8E51E7139C600FE2254 /* GistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C2A8E91E7139C600FE2254 /* GistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistUITests.swift; sourceTree = "<group>"; };
 		E3C2A8EB1E7139C600FE2254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3EB66BE1E8F978E008D8643 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfo.swift; path = Models/UserInfo.swift; sourceTree = "<group>"; };
+		E3EB66C11E8F99D0008D8643 /* SettingUserNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingUserNameViewController.swift; path = Controller/SettingUserNameViewController.swift; sourceTree = "<group>"; };
 		E3EE3AA21E853D0C0063FD6E /* StringLayoutHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringLayoutHandler.swift; path = Gist/StringLayoutHandler.swift; sourceTree = "<group>"; };
 		E3EE3AA31E853D0C0063FD6E /* TmTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TmTypes.swift; path = Gist/TmTypes.swift; sourceTree = "<group>"; };
 		E3EE3AA61E853D260063FD6E /* Themes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Themes; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		E3C2A8BD1E7139C600FE2254 = {
 			isa = PBXGroup;
 			children = (
+				E3EB66C01E8F97B4008D8643 /* Models */,
 				E38A731D1E88B739004C5D48 /* MyPlayground.playground */,
 				E3EE3AD01E8540F80063FD6E /* Support files */,
 				E3EE3ACE1E8540980063FD6E /* Application */,
@@ -184,7 +187,7 @@
 			children = (
 				E3BFF5F41E84B6D100A660E3 /* GistsViewController.swift */,
 				E3C2A8CB1E7139C600FE2254 /* DetailViewController.swift */,
-				E382098C1E86852D00FD9BA9 /* HTMLViewController.swift */,
+				E3EB66C11E8F99D0008D8643 /* SettingUserNameViewController.swift */,
 			);
 			name = Controller;
 			path = Gist;
@@ -206,6 +209,14 @@
 				E3C2A8EB1E7139C600FE2254 /* Info.plist */,
 			);
 			path = GistUITests;
+			sourceTree = "<group>";
+		};
+		E3EB66C01E8F97B4008D8643 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E3EB66BE1E8F978E008D8643 /* UserInfo.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		E3EE3AAE1E853DDE0063FD6E /* SyntaxKit */ = {
@@ -510,8 +521,8 @@
 				E3BFF5F51E84B6D100A660E3 /* GistsViewController.swift in Sources */,
 				E3EE3AC41E853DEC0063FD6E /* Color.swift in Sources */,
 				E3C2A8CC1E7139C600FE2254 /* DetailViewController.swift in Sources */,
+				E3EB66C21E8F99D0008D8643 /* SettingUserNameViewController.swift in Sources */,
 				E3EE3ACB1E853DEC0063FD6E /* ResultSet.swift in Sources */,
-				E382098D1E86852D00FD9BA9 /* HTMLViewController.swift in Sources */,
 				E3EE3AC61E853DEC0063FD6E /* Parser.swift in Sources */,
 				E3EE3ACC1E853DEC0063FD6E /* ScopedString.swift in Sources */,
 				E3EE3AA51E853D0C0063FD6E /* TmTypes.swift in Sources */,
@@ -525,6 +536,7 @@
 				E3EE3ACA1E853DEC0063FD6E /* Result.swift in Sources */,
 				E3EE3ACD1E853DEC0063FD6E /* Theme.swift in Sources */,
 				E3EE3AC71E853DEC0063FD6E /* Pattern.swift in Sources */,
+				E3EB66BF1E8F978E008D8643 /* UserInfo.swift in Sources */,
 				E3EE3AA41E853D0C0063FD6E /* StringLayoutHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,21 +20,14 @@ class DetailViewController: UIViewController {
 	var gist: Gist? {
 		didSet {
 			self.content = gist?.content ?? ""
-			htmlVC.content = content
 		}
 	}
 	var content = ""
 
 	@IBOutlet weak var loadHTML: UIBarButtonItem!
-	let htmlVC = HTMLViewController()
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setUpCodeTextView()
-		loadHTML.rx.tap.subscribe(onNext: {
-			self.htmlVC.content = self.content
-			self.show(self.htmlVC, sender: nil)
-		}).disposed(by: bag)
 	}
 
 	fileprivate func setUpCodeTextView() {
