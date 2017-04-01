@@ -19,6 +19,7 @@
 		E3C2A8EA1E7139C600FE2254 /* GistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2A8E91E7139C600FE2254 /* GistUITests.swift */; };
 		E3EB66BF1E8F978E008D8643 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EB66BE1E8F978E008D8643 /* UserInfo.swift */; };
 		E3EB66C21E8F99D0008D8643 /* SettingUserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EB66C11E8F99D0008D8643 /* SettingUserNameViewController.swift */; };
+		E3EB66C41E8F9C94008D8643 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EB66C31E8F9C94008D8643 /* Gist.swift */; };
 		E3EE3AA41E853D0C0063FD6E /* StringLayoutHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AA21E853D0C0063FD6E /* StringLayoutHandler.swift */; };
 		E3EE3AA51E853D0C0063FD6E /* TmTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EE3AA31E853D0C0063FD6E /* TmTypes.swift */; };
 		E3EE3AAA1E853D260063FD6E /* Themes in Resources */ = {isa = PBXBuildFile; fileRef = E3EE3AA61E853D260063FD6E /* Themes */; };
@@ -83,6 +84,7 @@
 		E3C2A8EB1E7139C600FE2254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3EB66BE1E8F978E008D8643 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfo.swift; path = Models/UserInfo.swift; sourceTree = "<group>"; };
 		E3EB66C11E8F99D0008D8643 /* SettingUserNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingUserNameViewController.swift; path = Controller/SettingUserNameViewController.swift; sourceTree = "<group>"; };
+		E3EB66C31E8F9C94008D8643 /* Gist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gist.swift; path = Models/Gist.swift; sourceTree = "<group>"; };
 		E3EE3AA21E853D0C0063FD6E /* StringLayoutHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringLayoutHandler.swift; path = Gist/StringLayoutHandler.swift; sourceTree = "<group>"; };
 		E3EE3AA31E853D0C0063FD6E /* TmTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TmTypes.swift; path = Gist/TmTypes.swift; sourceTree = "<group>"; };
 		E3EE3AA61E853D260063FD6E /* Themes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Themes; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				E3EB66BE1E8F978E008D8643 /* UserInfo.swift */,
+				E3EB66C31E8F9C94008D8643 /* Gist.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				E3EE3AC61E853DEC0063FD6E /* Parser.swift in Sources */,
 				E3EE3ACC1E853DEC0063FD6E /* ScopedString.swift in Sources */,
 				E3EE3AA51E853D0C0063FD6E /* TmTypes.swift in Sources */,
+				E3EB66C41E8F9C94008D8643 /* Gist.swift in Sources */,
 				E3EE3AC21E853DEC0063FD6E /* Capture.swift in Sources */,
 				E3EE3AC11E853DEC0063FD6E /* BundleManager.swift in Sources */,
 				E3EE3AC01E853DEC0063FD6E /* AttributedParsingOperation.swift in Sources */,

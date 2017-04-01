@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SafariServices
 
 class DetailViewController: UIViewController {
 
@@ -25,9 +26,19 @@ class DetailViewController: UIViewController {
 	var content = ""
 
 	@IBOutlet weak var loadHTML: UIBarButtonItem!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setUpCodeTextView()
+		print(self.gist)
+		loadHTML.rx.tap.asObservable().subscribe(onNext: {
+			print("0-0---0")
+			guard let gist = self.gist else { return }
+
+			print(gist)
+			let htmlView: SFSafariViewController = SFSafariViewController(url: URL(string: gist.htmlUrl)!)
+			self.present(htmlView, animated: true, completion: nil)
+		}).disposed(by: bag)
 	}
 
 	fileprivate func setUpCodeTextView() {
