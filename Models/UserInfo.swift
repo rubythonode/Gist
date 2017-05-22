@@ -1,6 +1,7 @@
 import UIKit
 
 struct UserInfo {
+
 	static var userName: String {
 		return UserDefaults.standard.string(forKey: "gist_user_name") ?? ""
 	}

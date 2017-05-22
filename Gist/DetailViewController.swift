@@ -5,11 +5,19 @@ import SafariServices
 
 class DetailViewController: UIViewController {
 
+	@IBOutlet weak var loadHTML: UIBarButtonItem!
 	@IBOutlet weak var codeTextView: UITextView!
+
+	var content = ""
+
+	var gist: Gist? {
+		didSet {
+			self.content = gist?.content ?? ""
+		}
+	}
 
 	let bag = DisposeBag()
 	fileprivate var manager = BundleManager {
-
 		(identifier, isLanguage) -> (URL?) in typealias TmTypeGenerator = (String) -> TmType?
 		let languageGen: TmTypeGenerator = { id in return TmLanguage(rawValue: id) }
 		let themeGen: TmTypeGenerator = { id in return TmTheme(rawValue: id) }
@@ -18,27 +26,17 @@ class DetailViewController: UIViewController {
 		return Bundle.main.url(forResource: type.fileName, withExtension: type.extensionType)
 	}
 
-	var gist: Gist? {
-		didSet {
-			self.content = gist?.content ?? ""
-		}
-	}
-	var content = ""
-
-	@IBOutlet weak var loadHTML: UIBarButtonItem!
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		setUpCodeTextView()
-		print(self.gist)
-		loadHTML.rx.tap.asObservable().subscribe(onNext: {
-			print("0-0---0")
-			guard let gist = self.gist else { return }
 
-			print(gist)
-			let htmlView: SFSafariViewController = SFSafariViewController(url: URL(string: gist.htmlUrl)!)
-			self.present(htmlView, animated: true, completion: nil)
-		}).disposed(by: bag)
+		setUpCodeTextView()
+
+		loadHTML.rx.tap
+			.subscribe(onNext: {
+				guard let gist = self.gist else { return }
+				let htmlView: SFSafariViewController = SFSafariViewController(url: URL(string: gist.htmlUrl)!)
+				self.present(htmlView, animated: true, completion: nil)
+			}).disposed(by: bag)
 	}
 
 	fileprivate func setUpCodeTextView() {
@@ -49,6 +47,7 @@ class DetailViewController: UIViewController {
 	}
 
 	fileprivate func generateCodeString(with content: String) -> NSAttributedString {
+
 		let themeString: String = "Tomorrow-Night-Bright"
 
 		guard let font = UIFont(name: "Menlo-Regular", size: 14.0),

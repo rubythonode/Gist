@@ -12,9 +12,10 @@ class SettingUserNameViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		saveBarButton.rx.tap.asObservable().subscribe(onNext: {
-			UserInfo.saveUserName(with: self.userNameTextField.text ?? "")
-			self.dismiss(animated: true, completion: nil)
-		}).disposed(by: disposeBag)
+		saveBarButton.rx.tap
+			.subscribe(onNext: {
+				UserInfo.saveUserName(with: self.userNameTextField.text ?? "")
+				self.dismiss(animated: true, completion: nil)
+			}).disposed(by: disposeBag)
 	}
 }

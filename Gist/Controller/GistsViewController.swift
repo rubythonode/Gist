@@ -10,10 +10,10 @@ class GistsViewController: UIViewController, UITableViewDelegate {
 	let bag = DisposeBag()
 
 	override func viewWillAppear(_ animated: Bool) {
-
 		if UserInfo.userName != "" {
 			viewModel = GistsViewModel(userName: UserInfo.userName)
 			tableView.rx.setDelegate(self).disposed(by: bag)
+
 			viewModel.gists.asObservable()
 				.bindTo(tableView.rx.items(cellIdentifier: "GistCell", cellType: GistCell.self))
 				{ (row, element, cell) in

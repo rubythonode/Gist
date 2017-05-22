@@ -1,0 +1,6 @@
+framework module ifAction {
+  umbrella header "ifAction-umbrella.h"
+
+  export *
+  module * { export * }
+}

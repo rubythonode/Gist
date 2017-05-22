@@ -4,14 +4,13 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'Gist' do
-	pod 'Realm'
 	pod 'RxSwift',    '~> 3.0'
 	pod 'RxCocoa',    '~> 3.0'
-	pod 'RealmSwift'
+  pod 'ifAction'
+
 end
 
 target 'GistTests' do
-	pod 'RealmSwift'
 	pod 'RxBlocking', '~> 3.0'
 	pod 'RxTest', '~>3.0'
 end
