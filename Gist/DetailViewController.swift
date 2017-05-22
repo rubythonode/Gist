@@ -1,3 +1,11 @@
+//
+//  DetailViewController.swift
+//  Gist
+//
+//  Created by Won on 22/05/2017.
+//  Copyright © 2017 Won. All rights reserved.
+//
+
 import UIKit
 import RxSwift
 import RxCocoa
@@ -17,6 +25,7 @@ class DetailViewController: UIViewController {
 	}
 
 	let bag = DisposeBag()
+
 	fileprivate var manager = BundleManager {
 		(identifier, isLanguage) -> (URL?) in typealias TmTypeGenerator = (String) -> TmType?
 		let languageGen: TmTypeGenerator = { id in return TmLanguage(rawValue: id) }
@@ -33,6 +42,7 @@ class DetailViewController: UIViewController {
 
 		loadHTML.rx.tap
 			.subscribe(onNext: {
+				print(#function)
 				guard let gist = self.gist else { return }
 				let htmlView: SFSafariViewController = SFSafariViewController(url: URL(string: gist.htmlUrl)!)
 				self.present(htmlView, animated: true, completion: nil)

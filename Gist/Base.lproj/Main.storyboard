@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kl6-6Q-zt6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kl6-6Q-zt6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--User Name-->
+        <!--github user's name-->
         <scene sceneID="eYk-is-EPG">
             <objects>
                 <viewController id="JMZ-py-5oP" customClass="SettingUserNameViewController" customModule="Gist" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,8 +36,12 @@
                             <constraint firstItem="YxP-ib-BoI" firstAttribute="leading" secondItem="hvh-0H-Isf" secondAttribute="leadingMargin" constant="30" id="lsC-P0-vfm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="User Name" id="bPh-8A-6sk">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="3lN-38-4OC"/>
+                    <navigationItem key="navigationItem" title="github user's name" id="bPh-8A-6sk">
+                        <barButtonItem key="rightBarButtonItem" title="Read" id="3lN-38-4OC">
+                            <connections>
+                                <segue destination="qTd-a4-icg" kind="show" id="5yp-QE-VEU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="saveBarButton" destination="3lN-38-4OC" id="gVc-Pe-D8J"/>
@@ -46,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbd-fL-HoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183.2" y="-601.34932533733138"/>
+            <point key="canvasLocation" x="-404" y="209"/>
         </scene>
         <!--Gists-->
         <scene sceneID="aWc-Vf-2Jh">
@@ -104,21 +108,14 @@
                             <constraint firstAttribute="trailing" secondItem="ldT-Yf-ZAG" secondAttribute="trailing" id="TPi-ue-cYt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Gists" id="Bmp-AE-YpT">
-                        <barButtonItem key="rightBarButtonItem" title="set Name" id="t9c-rR-hS5">
-                            <connections>
-                                <segue destination="YAY-0b-v6Y" kind="presentation" id="Gqe-jW-PMl"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Gists" id="Bmp-AE-YpT"/>
                     <connections>
-                        <outlet property="setUserNameButton" destination="t9c-rR-hS5" id="LCJ-UD-xHd"/>
                         <outlet property="tableView" destination="ldT-Yf-ZAG" id="rkP-iC-usA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crf-Vx-YL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="135.38230884557723"/>
+            <point key="canvasLocation" x="535" y="207"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -159,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="137.18140929535232"/>
+            <point key="canvasLocation" x="1492" y="208"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8v4-Hw-nGz">
@@ -177,30 +174,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="qTd-a4-icg" kind="relationship" relationship="rootViewController" id="nRD-f5-tG9"/>
+                        <segue destination="JMZ-py-5oP" kind="relationship" relationship="rootViewController" id="Knj-Id-EK9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHA-Kf-XcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-740" y="136.28185907046478"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Kd0-dB-iaC">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YAY-0b-v6Y" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WwS-BH-5uc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="JMZ-py-5oP" kind="relationship" relationship="rootViewController" id="TCQ-Hi-DH0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EFv-b0-2st" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="244" y="-601.34932533733138"/>
+            <point key="canvasLocation" x="-1462" y="208"/>
         </scene>
     </scenes>
 </document>

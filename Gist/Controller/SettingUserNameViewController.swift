@@ -1,3 +1,11 @@
+//
+//  SettingUserNameViewController.swift
+//  Gist
+//
+//  Created by Won on 22/05/2017.
+//  Copyright © 2017 Won. All rights reserved.
+//
+
 import UIKit
 import RxSwift
 import RxCocoa
@@ -12,10 +20,9 @@ class SettingUserNameViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		saveBarButton.rx.tap
-			.subscribe(onNext: {
-				UserInfo.saveUserName(with: self.userNameTextField.text ?? "")
-				self.dismiss(animated: true, completion: nil)
-			}).disposed(by: disposeBag)
+		userNameTextField.rx.text.orEmpty
+			.bind {
+				UserInfo.userName = $0
+		}.disposed(by: disposeBag)
 	}
 }

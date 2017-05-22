@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		9EA53B4BCA9F25E8693670D1 /* Pods_GistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0AEE3945C863F601DF335AA /* Pods_GistTests.framework */; };
 		AC93E7884E615B19D791B3D4 /* Pods_Gist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9CB90EF96024B149B59F54 /* Pods_Gist.framework */; };
+		E3025FEB1ED2833D00991D4C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E3025FEA1ED2833D00991D4C /* README.md */; };
+		E3025FED1ED2853400991D4C /* GistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3025FEC1ED2853400991D4C /* GistsViewModel.swift */; };
+		E3025FEF1ED2859900991D4C /* GistCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3025FEE1ED2859900991D4C /* GistCellViewModel.swift */; };
+		E3025FF11ED285CA00991D4C /* GistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3025FF01ED285CA00991D4C /* GistCell.swift */; };
 		E3BFF5F51E84B6D100A660E3 /* GistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFF5F41E84B6D100A660E3 /* GistsViewController.swift */; };
 		E3C2A8CA1E7139C600FE2254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2A8C91E7139C600FE2254 /* AppDelegate.swift */; };
 		E3C2A8CC1E7139C600FE2254 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2A8CB1E7139C600FE2254 /* DetailViewController.swift */; };
@@ -67,6 +71,10 @@
 		B5AA2EC9D18F7FCE0053E5F8 /* Pods-Gist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gist/Pods-Gist.release.xcconfig"; sourceTree = "<group>"; };
 		D455E7A674E6567E228BA24D /* Pods-GistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GistTests/Pods-GistTests.release.xcconfig"; sourceTree = "<group>"; };
 		DBF785A8F9DEACBF6CEB24BE /* Pods-GistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GistTests/Pods-GistTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3025FEA1ED2833D00991D4C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E3025FEC1ED2853400991D4C /* GistsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistsViewModel.swift; sourceTree = "<group>"; };
+		E3025FEE1ED2859900991D4C /* GistCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistCellViewModel.swift; sourceTree = "<group>"; };
+		E3025FF01ED285CA00991D4C /* GistCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GistCell.swift; sourceTree = "<group>"; };
 		E3BFF5F41E84B6D100A660E3 /* GistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GistsViewController.swift; path = Controller/GistsViewController.swift; sourceTree = "<group>"; };
 		E3C2A8C61E7139C600FE2254 /* Gist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C2A8C91E7139C600FE2254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Gist/AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +166,7 @@
 		E3C2A8BD1E7139C600FE2254 = {
 			isa = PBXGroup;
 			children = (
+				E3025FEA1ED2833D00991D4C /* README.md */,
 				E3EB66C01E8F97B4008D8643 /* Models */,
 				E3EE3AD01E8540F80063FD6E /* Support files */,
 				E3EE3ACE1E8540980063FD6E /* Application */,
@@ -186,6 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				E3BFF5F41E84B6D100A660E3 /* GistsViewController.swift */,
+				E3025FEC1ED2853400991D4C /* GistsViewModel.swift */,
+				E3025FF01ED285CA00991D4C /* GistCell.swift */,
+				E3025FEE1ED2859900991D4C /* GistCellViewModel.swift */,
 				E3C2A8CB1E7139C600FE2254 /* DetailViewController.swift */,
 				E3EB66C11E8F99D0008D8643 /* SettingUserNameViewController.swift */,
 			);
@@ -522,7 +534,9 @@
 				E3BFF5F51E84B6D100A660E3 /* GistsViewController.swift in Sources */,
 				E3EE3AC41E853DEC0063FD6E /* Color.swift in Sources */,
 				E3C2A8CC1E7139C600FE2254 /* DetailViewController.swift in Sources */,
+				E3025FF11ED285CA00991D4C /* GistCell.swift in Sources */,
 				E3EB66C21E8F99D0008D8643 /* SettingUserNameViewController.swift in Sources */,
+				E3025FEB1ED2833D00991D4C /* README.md in Sources */,
 				E3EE3ACB1E853DEC0063FD6E /* ResultSet.swift in Sources */,
 				E3EE3AC61E853DEC0063FD6E /* Parser.swift in Sources */,
 				E3EE3ACC1E853DEC0063FD6E /* ScopedString.swift in Sources */,
@@ -535,10 +549,12 @@
 				E3EE3AC91E853DEC0063FD6E /* Repository.swift in Sources */,
 				E3EE3AC51E853DEC0063FD6E /* Language.swift in Sources */,
 				E3EE3ABF1E853DEC0063FD6E /* AttributedParser.swift in Sources */,
+				E3025FEF1ED2859900991D4C /* GistCellViewModel.swift in Sources */,
 				E3EE3ACA1E853DEC0063FD6E /* Result.swift in Sources */,
 				E3EE3ACD1E853DEC0063FD6E /* Theme.swift in Sources */,
 				E3EE3AC71E853DEC0063FD6E /* Pattern.swift in Sources */,
 				E3EB66BF1E8F978E008D8643 /* UserInfo.swift in Sources */,
+				E3025FED1ED2853400991D4C /* GistsViewModel.swift in Sources */,
 				E3EE3AA41E853D0C0063FD6E /* StringLayoutHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
